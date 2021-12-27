@@ -14,7 +14,7 @@ client = discord.Client(intents=intents)
 
 @client.event
 async def on_message(message):
-    # Stopps the bot from responding to other bots, including itself.
+    # Stops the bot from responding to other bots, including itself.
     if message.author.bot:
         return
 
