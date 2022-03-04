@@ -24,7 +24,7 @@ async def on_message(message):
     if all(x in message.content.lower() for x in ["doesn't", "work", "computer"]) and message.author.id == 596938745379291138:
         await message.channel.send("Have you tried turning it off and on again?")
 
-    if message.author.top_role > message.guild.me.top_role:
+    if message.author.top_role > message.guild.me.top_role and message.content == "restart":
         await client.close()
 
 @client.event
