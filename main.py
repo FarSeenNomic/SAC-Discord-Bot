@@ -21,6 +21,9 @@ async def on_message(message):
     if message.content == "Hello!":
         await message.channel.send("Hello!")
 
+    if all(x in message.content.lower() for x in ["doesn't", "work", "computer"]) and message.author.id == 596938745379291138:
+        await message.channel.send("Have you tried turning it off and on again?")
+
 @client.event
 async def on_ready():
     print(client.user.name, "is ready!")
